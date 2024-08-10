@@ -1,0 +1,28 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.d-none {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 13px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFFFF
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#fae0ae, #FFA500);
+  border-radius: 13px;
+}

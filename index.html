@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="icon/favicon.ico"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="css/standart.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/basket.css">
+    <link rel="stylesheet" href="css/footer.css"/>
+    <link rel="stylesheet" href="css/mobile.css">
+    <script src="js/db.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="script.js"></script>
+    <script src="js/basket.js"></script>
+    <title>Bestell App</title>
+  </head>
+
+  <body onload="includeHTML(); init(); mobileClass();">
+    <header>
+      <div w3-include-html="templates/header.html"></div>
+    </header>
+
+    <main>
+      <div id="main-content" class="main-content">
+        <div class="content-menu">
+          <section>
+            <picture>
+              <img src="img/pizza.jpg" alt="Pizza" />
+            </picture>
+          </section>
+          <section>
+            <div class="logo-container">
+              <div class="logo">
+                <img src="img/luigi.jpg" alt="Logo" />
+              </div>
+            </div>
+            <div class="info-box">
+              <div class="info-name">
+                <h1>Luigi`s Pizza</h1>
+                <div class="info-like">
+                  <div class="info-btn">
+                    <img src="icon/die-info.png" alt="Info" />
+                  </div>
+                  <div class="info-btn">
+                    <img src="icon/heart-white.png" alt="Heart" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="rezession-delivery">
+                <div class="rezession">
+                  <img src="icon/star.png" alt="Rezession" />
+                  <span class="evaluation">4.1 (200+)</span>
+                </div>
+                <div class="min-order">
+                  <img src="icon/basket.png" alt="Basket" />
+                  <span>Min. 15,00 €</span>
+                  &bullet;
+                  <img src="icon/bike.png" alt="Bike" />
+                  <span>2,00 €</span>
+                </div>
+              </div>
+
+              <div class="description">
+                <span>
+                  Wir begeistern unsere Kunden mit Frische und Leidenschaft für
+                  die Vielfalt der italienischen Küche. <br /><br />
+                  Genießen Sie unsere hausgemachten italienische Pizzen, Pasta
+                  und vieles mehr bei Ihnen zu Hause.
+                </span>
+              </div>
+
+              <div class="menu-bar">
+                <img src="icon/suchlupe.png" alt="Search">
+                &lang;
+                <a href="#1">Salate</a>
+                <a href="#2">Pizza</a>
+                <a href="#3">Pasta</a>
+                <a href="#4">Getränke</a>
+                &rang;
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div id="menu-container" class="menus">
+              
+            </div>
+          </section>
+        </div>
+        <div id="basket" class="content-basket">
+          <section>
+            <div class="basket">
+              <div class="basket">
+                <h1>Warenkorb</h1>
+              </div>
+              <div id="basket-empty">
+                <div class="basket-text">
+                  <img src="icon/basket.png" alt="Basket" />
+                  <h2>Fülle deinen Warenkorb</h2>
+                  <span>
+                    Füge einige leckere Gerichte aus der <br />
+                    Speisekarte hinzu und bestelle dein Essen.
+                  </span>
+                </div>
+              </div>
+              <div id="basket-full">
+                <div id="basket-menu">
+
+                </div>
+                <div id="basket-price">
+
+                </div>    
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div onclick="popUpClose()" id="pay-section" class="pay d-none"  >
+        <section class="pop-up">
+          <div class="order-confirmation">
+              <h1>Vielen Dank für Ihre Bestellung</h1>
+              <img src="img/delivery.jpg" alt="Delivery">
+              <p>Luigi`s Pizza hat Ihre Bestellung bestätigt,<br>
+                 unser Fahrer ist für Sie unterwegs.
+              </p>
+          </div>
+        </section>
+      </div>      
+      <div id="mobile" class="mobile">
+
+      </div>
+      <div id="mobilePay" class="mobilePay d-none" >
+        <div class="pay-header">
+          <h1>Warenkorb</h1>
+          <div onclick="closeMobileBasket()" class="close-container">
+            <img class="black" src="icon/x-black.png" alt="Close">
+            <img class="orange" src="icon/x-orange.png" alt="Close">
+          </div>
+        </div>
+        <div id="mobile-menu"></div>
+        <div id="mobile-price"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div w3-include-html="templates/footer.html"></div>
+    </footer>
+  </body>
+</html>
